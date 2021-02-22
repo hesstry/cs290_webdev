@@ -1,0 +1,29 @@
+<h1>No requests have been made (-:</h1>
+
+<form action="/request" method="GET">
+  <div>
+    <label for="key1">What should be the value of key1?</label>
+    <input name="key1" id="key1">
+  </div>
+  <div>
+    <label for="key2">What should be the value of key2?</label>
+    <input name="key2" id="key2">
+  </div>
+  <div>
+    <button>Send values</button>
+  </div>
+</form>
+
+<form action="/request?query_key1=val1&query_key2=val2" method="POST">
+  <div>
+    <label for="body_key1">What should be the value of body_key1?</label>
+    <input name="body_key1" id="body_key1">
+  </div>
+  <div>
+    <label for="body_key2">What should be the value of body_key2?</label>
+    <input name="body_key2" id="body_key2">
+  </div>
+  <div>
+    <button>Send values</button>
+  </div>
+</form>
