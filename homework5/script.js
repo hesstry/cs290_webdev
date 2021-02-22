@@ -9,13 +9,13 @@ app.use(bodyParser.json());
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
-app.set('port', 3000);
+app.set('port', 5345);
 
-app.get('/',function(req,res){
+app.get('http://flip1.engr.oregonstate.edu',function(req,res){
   res.render('home');
 });
 
-app.route('/request')
+app.route('http://flip1.engr.oregonstate.edu/request')
 
   .get(function(req,res){
 
@@ -74,5 +74,5 @@ app.use(function(err, req, res, next){
 });
 
 app.listen(app.get('port'), function(){
-  console.log('Express started on http://localhost:' + app.get('port') + '; press Ctrl-C to terminate.');
+  console.log('Express started on http://flip1.engr.oregonstate.edu:' + app.get('port') + '; press Ctrl-C to terminate.');
 });
