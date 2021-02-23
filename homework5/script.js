@@ -9,6 +9,7 @@ app.use(bodyParser.json());
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
+app.set('port', 3000);
 
 app.get('/',function(req,res){
   res.render('home');
@@ -72,6 +73,6 @@ app.use(function(err, req, res, next){
   res.render('500');
 });
 
-app.listen("http://flip1.engr.oregonstate.edu:5345",function(){
-  console.log('Express started on http://flip1.engr.oregonstate.edu:' + app.get('port') + '; press Ctrl-C to terminate.');
+app.listen(app.get('port'), function(){
+  console.log('Express started on http://localhost:' + app.get('port') + '; press Ctrl-C to terminate.');
 });
