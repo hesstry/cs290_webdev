@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:5345/";
+const baseUrl = "http://flip3.engr.oregonstate.edu:5345/";
 
 let add_exercise = document.querySelector(".addExerciseForm");
 
